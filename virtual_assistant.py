@@ -5,7 +5,8 @@ import webbrowser
 import pyttsx3
 
 r = sr.Recognizer()
-r.energy_threshold = 4000
+#high value to detect voice input in environment. Depends on microphone sensitivity or audio data. Value for speaking is between 150 to 3500.
+r.energy_threshold = 3500
 
 #detect user speech into text
 def record_audiodata(ask=False):
